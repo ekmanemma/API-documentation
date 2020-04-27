@@ -1,0 +1,24 @@
+{
+  "name": "api-documentation",
+  "version": "1.0.0",
+  "description": "### http://api.softhouse.rocks",
+  "main": "index.js",
+  "dependencies": {
+    "start": "node index.js",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekmanemma/API-documentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekmanemma/API-documentation/issues"
+  },
+  "homepage": "https://github.com/ekmanemma/API-documentation#readme"
+}
