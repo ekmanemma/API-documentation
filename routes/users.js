@@ -37,11 +37,33 @@ getAllUsers = (req, res) => {
       "__v": 0
     }
   ];
+  
   res.status(200).send(response)
 };
 
-//code 200 ok? should be 201 created, can you send the code number?
 addUser = (req, res) => {
+  response = {
+    "address": {
+      "geo": {
+        "lat": 0,
+        "lng": 0
+      },
+      "street": "string",
+      "suite": "string",
+      "city": "string",
+      "zipcode": "string"
+    },
+    "_id": "5e9ff081619a44002135097a",
+    "name": "string",
+    "username": "string",
+    "email": "string",
+    "id": 1,
+    "__v": 0
+  };
+  res.status(201).send(response)
+};
+
+getOneUser = (req, res) => {
   response = {
     "address": {
       "geo": {
@@ -60,12 +82,37 @@ addUser = (req, res) => {
     "id": 1,
     "__v": 0
   };
-  res.status(201).send(response)
+  res.status(200).send(response)
 };
+
+replaceOneUser = (req, res) => {
+  response = {
+      "address": {
+        "geo": {
+          "lat": 0,
+          "lng": 0
+        },
+        "street": "string",
+        "suite": "string",
+        "city": "string",
+        "zipcode": "string"
+      },
+      "_id": "5e9ff081619a44002135097a",
+      "name": "emma",
+      "username": "hej",
+      "email": null,
+      "id": 382,
+      "__v": 0
+  }
+
+  res.status(200).send(response);
+}
 
 
 
 module.exports = {
   getAllUsers: getAllUsers,
-  addUser: addUser
-} 
+  addUser: addUser,
+  getOneUser: getOneUser,
+  replaceOneUser: replaceOneUser
+}

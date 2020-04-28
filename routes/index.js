@@ -16,6 +16,9 @@ router.post("/users", users.addUser);
 router.get("/posts", posts.getAllPosts);
 router.post("/posts", posts.addPost);
 
-// router.get("/:pathParameter", helloWorld.params)
+router.get("/users/:userId", users.getOneUser);
+router.put("/users/:userId", users.replaceOneUser);
+
+router.get("/posts/:postId", posts.getOnePost);
 
 module.exports = router;

@@ -27,7 +27,21 @@ addPost = (req, res) => {
   res.status(201).send(response);
 };
 
+getOnePost = (req, res) => {
+  response = {
+    "_id": "5e806d9f42fbde006b6b9ed8",
+    "userId": 5,
+    "id": 10,
+    "title": "string",
+    "body": "string",
+    "__v": 0
+  }
+
+  res.status(200).send(response);
+}
+
 module.exports = {
   getAllPosts: getAllPosts,
-  addPost: addPost
+  addPost: addPost,
+  getOnePost: getOnePost
 } 
