@@ -147,7 +147,7 @@ body data response shows email: null.
 
 #### Command example:
 ```sh
-curl -X PUT "curl localhost:3000/users/382" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"name\":\"emma\",\"username\":\"hej\",\"address\":{\"street\":\"string\",\"suite\":\"string\",\"city\":\"string\",\"zipcode\":\"string\",\"geo\":{\"lat\":0,\"lng\":0}}}"
+curl -X PUT "localhost:3000/users/382" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"name":"emma","username":"hej","address":{"street":"string","suite":"string","city":"string","zipcode":"string","geo":{"lat":0,"lng":0}}}'
 ```
 
 #### Example of body data response: 
@@ -216,7 +216,7 @@ Posts a post to the API
 
 #### Command example: 
 ```sh
-curl -X POST "localhost:3000/posts" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{"title":"string","body":"string","userId":382}"
+curl -X POST "localhost:3000/posts" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"title":"string","body":"string","userId":382}'
 ```
 
 #### Example of body data response:
@@ -272,7 +272,7 @@ body data response shows email: null.
 
 #### Command example:
 ```sh
-curl -X PUT "localhost:3000/posts/14" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":10}"
+curl -X PUT "localhost:3000/posts/14" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"title":"string","body":"string","userId":10}'
 ```
 
 #### Example of body data response: 
@@ -299,7 +299,7 @@ Updates a postobject with supplied parameters.
 
 #### Command example:
 ```sh
-curl -X PATCH "localhost:3000/posts/10" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":5}"
+curl -X PATCH "localhost:3000/posts/10" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"title":"string","body":"string","userId":5}'
 ```
 
 #### Example of body data response: 
