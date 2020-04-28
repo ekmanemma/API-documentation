@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 const users = require('./users.js');
 const posts = require('./posts.js');
@@ -10,11 +10,11 @@ router.use(function timeLog (req, res, next) {
   next()
 })
 
-router.get("/users", users.getUsers);
-router.post("/users", users.postUser);
+router.get("/users", users.getAllUsers);
+router.post("/users", users.addUser);
 
-router.get("/posts", posts.getPosts);
-router.post("/posts", posts.postPosts);
+router.get("/posts", posts.getAllPosts);
+router.post("/posts", posts.addPost);
 
 // router.get("/:pathParameter", helloWorld.params)
 

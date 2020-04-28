@@ -7,10 +7,6 @@ const port = process.env.PORT || 3000;
 
 app.use('/', routes)
 
-// app.get("/", (req, res) => {
-//   res.send({"Hello": "World"});
-// });
-
 // Start up server and begin listen to requests
 const listener = app.listen(port, () => {
   console.info(`Server is listening on port ${listener.address().port}.`);
