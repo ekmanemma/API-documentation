@@ -32,7 +32,7 @@ Fetches all the users
 
 #### Command example:
 ```sh
-curl http://api.softhouse.rocks/users
+curl localhost:3000/users
 ```
 
 #### Example of body data response:
@@ -71,7 +71,7 @@ Posts a user to the API
 
 #### Command example: 
 ```sh
-curl -X POST -H "Content-Type:application/json" http://api.softhouse.rocks/users -d '{"name": "string","username":"string","email": "string","address": {"street": "string","suite": "string","city": "string","zipcode": "string","geo": {"lat": 0,"lng": 0}}}'
+curl -X POST -H "Content-Type:application/json" localhost:3000/users -d '{"name": "string","username":"string","email": "string","address": {"street": "string","suite": "string","city": "string","zipcode": "string","geo": {"lat": 0,"lng": 0}}}'
 ```
 
 #### Example of body data response:
@@ -110,7 +110,7 @@ Fetches the data of the chosen user
 
 #### Command example:
 ```sh
-curl http://api.softhouse.rocks/users/10
+curl localhost:3000/users/10
 ```
 
 #### Example of body data response:
@@ -147,7 +147,7 @@ body data response shows email: null.
 
 #### Command example:
 ```sh
-curl -X PUT "https://api.softhouse.rocks/users/382" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"name\":\"emma\",\"username\":\"hej\",\"address\":{\"street\":\"string\",\"suite\":\"string\",\"city\":\"string\",\"zipcode\":\"string\",\"geo\":{\"lat\":0,\"lng\":0}}}"
+curl -X PUT "curl localhost:3000/users/382" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"name\":\"emma\",\"username\":\"hej\",\"address\":{\"street\":\"string\",\"suite\":\"string\",\"city\":\"string\",\"zipcode\":\"string\",\"geo\":{\"lat\":0,\"lng\":0}}}"
 ```
 
 #### Example of body data response: 
@@ -187,7 +187,7 @@ Fetches all the posts from URI.
 
 #### Command example:
 ```sh
-curl "http://api.softhouse.rocks/posts"
+curl localhost:3000/posts
 ```
 
 #### Example of body data response:
@@ -216,7 +216,7 @@ Posts a post to the API
 
 #### Command example: 
 ```sh
-curl -X POST "https://api.softhouse.rocks/posts" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":382}"
+curl -X POST "localhost:3000/posts" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{"title":"string","body":"string","userId":382}"
 ```
 
 #### Example of body data response:
@@ -245,7 +245,7 @@ Fetches a specific
 
 #### Command example:
 ```sh
-curl "http://api.softhouse.rocks/posts/10"
+curl localhost:3000/posts/10
 ```
 
 #### Example of body data response:
@@ -272,7 +272,7 @@ body data response shows email: null.
 
 #### Command example:
 ```sh
-curl -X PUT "https://api.softhouse.rocks/posts/14" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":10}"
+curl -X PUT "localhost:3000/posts/14" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":10}"
 ```
 
 #### Example of body data response: 
@@ -299,7 +299,7 @@ Updates a postobject with supplied parameters.
 
 #### Command example:
 ```sh
-curl -X PATCH "https://api.softhouse.rocks/posts/10" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":5}"
+curl -X PATCH "localhost:3000/posts/10" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"title\":\"string\",\"body\":\"string\",\"userId\":5}"
 ```
 
 #### Example of body data response: 
@@ -335,7 +335,7 @@ Deletes a postobject.
 
 #### Command example:
 ```sh
-curl -i -X DELETE "https://api.softhouse.rocks/posts/39"
+curl -i -X DELETE "localhost:3000/posts/39"
 ```
 
 #### Example of body data response: 
@@ -346,5 +346,3 @@ OK%
 #### Result code: (200) if sucessfull, (204) if nothing was deleted.
 <br/>
 <br/>
-
-
