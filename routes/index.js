@@ -20,5 +20,8 @@ router.get("/users/:userId", users.getOneUser);
 router.put("/users/:userId", users.replaceOneUser);
 
 router.get("/posts/:postId", posts.getOnePost);
+router.put("/posts/:postId", posts.replaceOnePost);
+router.patch("/posts/:postId", posts.updatePost);
+router.delete("/posts/:postId", posts.deletePost);
 
 module.exports = router;
